@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payer portal</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.2/web3.min.js"
+      integrity="sha512-KURAVUCRxZKDemghhiNqTnYzVPUtO3GYznBZRWRBT2GJJ5PmePAxfO7QMGCM8xUJ0QfrUYJDrtRJM4L4NOtfow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
+    </style>
+  </head>
+
+  <body style="background-color: #210049">
+    <div class="container mt-5" style="background-color: #210049">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title text-center font-weight-bold">Greetings, User!</h3>
+              <h5 class="text-center mb-4">
+                Please provide your details to streamline your EMI payments with DeFi.
+              </h5>
+              <form>
+                <div class="form-group">
+                  <label for="acc" class="font-weight-bold">Account no.</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-user"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="acc"
+                      placeholder="Account No."
+                      aria-label="Account No."
+                      aria-describedby="basic-addon1"
+                      disabled
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="loanAmount" class="font-weight-bold">Total Amount</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">
+                        <i class="fab fa-ethereum"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control amount"
+                      id="loanAmount"
+                      placeholder="Loan Amount"
+                      aria-label="Loan Amount"
+                      aria-describedby="basic-addon1"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="date" class="font-weight-bold">Due Date</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-clock"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="date"
+                      class="form-control date"
+                      id="date"
+                      aria-label="Due Date"
+                      aria-describedby="basic-addon1"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="mortgage" class="font-weight-bold">Upload Mortgage</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-file"></i>
+                      </span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="mortgage"
+                      placeholder="Mortgage Address"
+                      aria-label="Mortgage"
+                      aria-describedby="basic-addon1"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button
+                  id="submit"
+                  type="submit"
+                  class="btn btn-warning btn-lg btn-block" style="font-weight: bold;">
+                   Submit Details ✔
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 mt-5">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title" style="font-weight: bold;">Please find your Loan Details here 👇🏻</h4>
+              <table class="table">
+                <thead style="background-color: #cab1e9;">
+                  <tr>
+                    <th>Account Address</th>
+                    <th>Amount</th>
+                    <th>Interest</th>
+                    <th></th>
+                    <th></th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody style="background-color: #f5edff; font-weight: bold;">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

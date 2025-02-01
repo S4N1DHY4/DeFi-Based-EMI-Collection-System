@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collector Portal</title>
+
+    <link rel="stylesheet" href="LBstyles.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet" />
+    
+    <style>
+        .login-area {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.2/web3.min.js" integrity="sha512-KURAVUCRxZKDemghhiNqTnYzVPUtO3GYznBZRWRBT2GJJ5PmePAxfO7QMGCM8xUJ0QfrUYJDrtRJM4L4NOtfow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body style="background-color: #210049">
+    <div class="container-fluid">
+        <div class="row justify-content-center" style="padding-top: 172px;">
+            <div class="col-md-8 mt-5 login-area">
+                <form>
+                    <h3 class="text-center" style="font-size:5.75rem; padding-top: 20px;">Greetings, Collector!</h3>
+                    <h4 class="text-center">Fill in the details of the loan you would like to lend</h4>
+
+                    <div class="form-group">
+                        <label for="accountNo">Account No.</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input
+                            type="text"
+                            class="form-control acc"
+                            placeholder="Account No."
+                            aria-label="Account No."
+                            aria-describedby="basic-addon1"
+                            disabled
+                          />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loanAmnt">Loan Amount</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fab fa-ethereum"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="loanAmnt" placeholder="Loan Amount" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="intrst">Interest</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-percent"></i></span>
+                            </div>
+                            <input type="text" class="form-control" id="intrst" placeholder="Interest" required />
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit" class="btn btn-warning btn-lg btn-block">
+                        Give Loan 🫴🏻
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="lend.js"></script>
+</body>
+</html>
